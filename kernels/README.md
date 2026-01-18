@@ -1,1 +1,0 @@
-Candle Kernels got moved to a standalone repo: https://github.com/Anonymized-First-Author-review-onlyFirst-Author-review-only/candle-index-select-cu

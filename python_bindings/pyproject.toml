@@ -10,7 +10,7 @@ readme = "README.md"
 requires-python = ">=3.10"
 license = {text = "MIT"}
 authors = [
-    {name = "Anonymized First Author", email = "no-reply@Anonymized-First-Author-review-only.eu"}
+    {name = "Anonymized First Author", email = "no-reply@Anonymized-First-Author-review-only.some"}
 ]
 keywords = ["transformers", "optimization", "radix", "mlp"]
 repository = "https://github.com/Anonymized-First-Author-review-only/radix-mlp"

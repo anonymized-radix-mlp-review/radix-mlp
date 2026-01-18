@@ -1,0 +1,36 @@
+[package]
+name = "candle-index-select-cu"
+version = "0.0.1"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+description = "Fast CUDA index_select kernel for Candle (f32/f16, u32 indices)."
+repository = "https://github.com/anonymized/candle-index-select-cu"
+authors = ["anonymized
+
+[lib]
+name = "candle_index_select_cu"
+path = "src/lib.rs"
+
+[features]
+default = ["cuda-12"]
+# Use cuda-12 for candle 0.9+ with cudarc 0.16+ (new API)
+# Use cuda-11 for older candle versions (pre-0.9) with older cudarc API
+cuda-12 = []
+cuda-11 = []
+
+[dependencies]
+candle = { version = ">=0.1", package = "candle-core", features = ["cuda"] }
+half = { version = "2.3.1", features = ["num-traits"] }
+
+[build-dependencies]
+anyhow = { version = "1", features = ["backtrace"] }
+num_cpus = "1.15.0"
+rayon = "1.7.0"
+
+[dev-dependencies]
+criterion = "0.5"
+rand = "0.8"
+
+[[bench]]
+name = "bench_index_select"
+harness = false
