@@ -8,7 +8,7 @@ RadixMLP enables prefix-based computation sharing for transformer models, elimin
 - Stateless operation: Single forward pass optimization, no cache management required
 - Weight compatible: Drop-in replacement for standard transformer models
 - compatible with autograd
-- Production ready: Integrated into [text-embeddings-inference upstream](https://github.com/huggingface/text-embeddings-inference/hidden-for-anonymity)
+- Production ready: Integrated into [text-embeddings-inference upstream](xxxx)
 
 ## Project Structure
 
@@ -85,15 +85,6 @@ let (compact_ids, _, _, _) = compute_fold_and_scatter(
 );
 ```
 
-## Production Integration
-
-### Text-Embeddings-Inference
-Upstream PR: [huggingface/text-embeddings-inference#761](https://github.com/huggingface/text-embeddings-inference/pull/761)
-
-- Zero-configuration enablement
-- Automatic thresholding
-- Production-tested with MSMARCO workloads
-
 ## Documentation
 
 - Rust Library: See `package/README.md`
@@ -101,16 +92,9 @@ Upstream PR: [huggingface/text-embeddings-inference#761](https://github.com/hugg
 - Training & Proofs: See `train/README.md`
 - Benchmarks: See `benchmark/README.md`
 
-## Verification Status
-
-- Forward pass: Numerically identical to baseline
-- Backward pass: Gradients identical to baseline
-- Weight compatibility: 100% compatible with transformers
-- Production: TEI upstream integration complete
-
 ## License
 
-MIT License - Copyright (c) 2025 Anonymized-First-Author-review-only
+Academic Review only.
 
 ## Performance Summary
 
